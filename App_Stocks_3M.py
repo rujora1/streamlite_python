@@ -1,3 +1,4 @@
+
 #Importar bibliotecas
 
 import streamlit as st
@@ -12,12 +13,12 @@ def carregar_dados (empresas):
     texto_tickers = " ".join(empresas)
     dados_acao = yf.Tickers(texto_tickers)
     cotacoes_acao = dados_acao.history(period = "1d", start = "2020-01-01", end= "2024-08-31")
-    
     cotacoes_acao = cotacoes_acao["Close"]
     return cotacoes_acao
 
+#Lista de ações
 acoes=["MMM", "HON", "ITW", "EMR", "GE", "BSX", "BAX"]
-
+#carregar dados
 dados = carregar_dados(acoes)
 
 
@@ -65,12 +66,16 @@ intervalo_data=st.sidebar.slider("Select period",
                                   max_value=data_final, 
                                   value=(data_inicial, data_final), step=timedelta(days=1))
 
+#Filtra dado pelo intervalo de datas selecionado
 dados=dados.loc[intervalo_data[0]:intervalo_data[1]]
 
 # criar o gráfico
-
 st.line_chart(dados)
 
+#Adicionar a legenda abaixo do gráfico
+st.write("Filters Applied")
+st.write(f"**Selected Stocks:**{', '.join(lista_acoes) if lista_acoes else 'None'}")
+st.write(f"**Date Range:** {intervalo_data[0].strftime('%Y-%m-%d')} to {intervalo_data[1].strftime('%Y-%m-%d')}")
 texto_performance_ativos = ""
 
 #for ativo in lista_acoes:
@@ -81,10 +86,7 @@ texto_performance_ativos = ""
 
 
 st.write(""" 
-         ### Actives performance
-         This was the performance of each active in the selected period:
-
-         {under construction}
+         ### Rui Ramos 2024
          """) 
 
 
