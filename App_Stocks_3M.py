@@ -48,7 +48,7 @@ st.write("""
          """) # Markdown
 
 # Adicionar imagem e texto adicional na barra lateral
-st.sidebar.image(r"C:\Users\Utilizador\1_APP_Rui\streamlite_python\foto_Rui.PNG", caption="Rui Ramos", width=150)  # Substitua "path_to_your_photo.jpg" pelo caminho da sua foto
+st.sidebar.image("foto_Rui.PNG", caption="Rui Ramos", width=150)  # Substitua "path_to_your_photo.jpg" pelo caminho da sua foto
 st.sidebar.write("**Engineer and Data_Scientist**")
 st.sidebar.write("Imagination is more important than knowledge, because knowledge is limited, whereas imagination embraces the entire world.")
 
