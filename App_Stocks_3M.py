@@ -50,7 +50,7 @@ st.write("""
 # Adicionar imagem e texto adicional na barra lateral
 st.sidebar.image("foto_Rui.PNG", caption="Rui Ramos", width=150)  # Substitua "path_to_your_photo.jpg" pelo caminho da sua foto
 st.sidebar.write("**Engineer and Data_Scientist**")
-st.sidebar.write("Imagination is more important than knowledge, because knowledge is limited, whereas imagination embraces the entire world.")
+st.sidebar.write("Learning is like planting seeds in the mind, and knowledge will always be our most inspiring harvest.")
 
 
 #Preparar visualizações = filtros
