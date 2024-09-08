@@ -17,7 +17,7 @@ def carregar_dados (empresas):
     return cotacoes_acao
 
 #Lista de ações
-acoes=["MMM", "HON", "ITW", "EMR", "GE", "BSX", "BAX"]
+acoes=["MMM", "HON", "ITW", "EMR", "GE", "BSX", "BAX", "DHR", "CSL", "DRW"]
 #carregar dados
 dados = carregar_dados(acoes)
 
