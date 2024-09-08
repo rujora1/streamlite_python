@@ -17,7 +17,7 @@ def carregar_dados (empresas):
     return cotacoes_acao
 
 #Lista de ações
-acoes=["MMM", "HON", "ITW", "EMR", "GE", "BSX", "BAX", "DHR", "CSL", "DRW"]
+acoes=["MMM", "HON", "ITW", "EMR", "GE", "BSX", "BAX", "DHR", "CSL", "DRW", "GLW"]
 #carregar dados
 dados = carregar_dados(acoes)
 
@@ -79,7 +79,7 @@ dados=dados.loc[intervalo_data[0]:intervalo_data[1]]
 st.line_chart(dados)
 
 #Adicionar a legenda abaixo do gráfico
-st.write("Filters Applied")
+st.write("Filters Applied:")
 st.write(f"**Selected Stocks:**{', '.join(lista_acoes) if lista_acoes else 'None'}")
 st.write(f"**Date Range:** {intervalo_data[0].strftime('%Y-%m-%d')} to {intervalo_data[1].strftime('%Y-%m-%d')}")
 texto_performance_ativos = ""
