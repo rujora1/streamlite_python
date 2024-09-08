@@ -80,7 +80,7 @@ st.line_chart(dados)
 
 #Adicionar a legenda abaixo do gráfico
 st.write("Filters Applied:")
-st.write(f"**Selected Stocks:**{', '.join(lista_acoes) if lista_acoes else 'None'}")
+st.write(f"**Selected Stocks:** {', '.join(lista_acoes) if lista_acoes else 'All'}")
 st.write(f"**Date Range:** {intervalo_data[0].strftime('%Y-%m-%d')} to {intervalo_data[1].strftime('%Y-%m-%d')}")
 texto_performance_ativos = ""
 
