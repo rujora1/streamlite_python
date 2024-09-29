@@ -12,7 +12,7 @@ from datetime import timedelta
 def carregar_dados (empresas):
     texto_tickers = " ".join(empresas)
     dados_acao = yf.Tickers(texto_tickers)
-    cotacoes_acao = dados_acao.history(period = "1d", start = "2017-01-01", end= "2024-09-13")
+    cotacoes_acao = dados_acao.history(period = "1d", start = "2017-01-01", end= "2025-12-31")
     cotacoes_acao = cotacoes_acao["Close"]
     return cotacoes_acao
 
